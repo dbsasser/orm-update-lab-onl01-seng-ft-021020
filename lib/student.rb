@@ -62,7 +62,7 @@ class Student
   def self.new_from_db(id)
     sql = "SELECT * FROM students WHERE id = ?"
     result = DB[:conn].execute(sql, id)[0]
-    Student.create(result[1], result[2]) 
-    
+    Student.create(result[1], result[2])
+
 
 end
