@@ -63,6 +63,7 @@ class Student
     sql = "SELECT * FROM students WHERE id = ?"
     result = DB[:conn].execute(sql, id)[0]
     Student.create(result[1], result[2])
+  end
 
 
 end
